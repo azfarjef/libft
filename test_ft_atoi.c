@@ -24,8 +24,8 @@ int	main(void)
 	printf("%d\n", atoi("2147483647"));
 	printf("%d\n", ft_atoi("-2147483648"));
 	printf("%d\n", atoi("-2147483648"));
-	printf("%d\n", ft_atoi("-2147483649"));
-	printf("%d\n", atoi("-2147483649"));
+	printf("%d\n", ft_atoi("-2147483650"));
+	printf("%d\n", atoi("-2147483650"));
 	printf("%d\n", ft_atoi("2147483648"));
 	printf("%d\n", atoi("2147483648"));
 }
