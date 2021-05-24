@@ -6,7 +6,7 @@
 #    By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 22:53:01 by mahmad-j          #+#    #+#              #
-#    Updated: 2021/05/20 17:33:05 by mahmad-j         ###   ########.fr        #
+#    Updated: 2021/05/25 03:17:47 by mahmad-j         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,11 +45,25 @@ SRC		=	ft_memset.c		\
 			ft_putendl_fd.c	\
 			ft_putnbr_fd.c	
 
+SRCSB	=	ft_lstnew.c			\
+			ft_lstadd_front.c	\
+			ft_lstsize.c		\
+			ft_lstlast.c		\
+			ft_lstadd_back.c	\
+			ft_lstclear.c		\
+			ft_lstdelone.c		\
+			ft_lstiter.c		\
+			ft_lstmap.c			\
+			$(SRCS)
+
 NAME	=	libft.a
 
 O = obj/
 OBJ = $(SRC:.c=.o)
 OBJINDIR = $(addprefix $(O), $(OBJ))
+
+OBJB = $(SRCSB:.c=.o)
+OBJBINDIR = $(addprefix $(O), $(OBJB))
 
 CC		=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
@@ -72,3 +86,6 @@ fclean	:	clean
 			rm -f $(NAME)
 
 re		:	fclean all
+
+bonus	:	$(OBJBINDIR)
+			ar -rc $(NAME) $(OBJBINDIR)
