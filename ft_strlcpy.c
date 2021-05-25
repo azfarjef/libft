@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:14:34 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/05/11 06:30:26 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/05/25 19:35:01 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	if (size < srclen)
+	if (size <= srclen)
 		dst[size - 1] = '\0';
-	if (size != 0)
+	else if (size != 0)
 		dst[i] = '\0';
 	return (srclen);
 }

@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 22:31:39 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/05/17 23:21:00 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/05/25 19:40:23 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putnbr_fd(pos_n / 10, fd);
 		c = pos_n % 10 + '0';
-		write(1, &c, 1);
+		write(fd, &c, 1);
 	}
 	else
 	{
