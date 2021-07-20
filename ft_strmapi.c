@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 15:53:20 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/05/17 16:57:57 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/07/20 12:46:40 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*ret;
 	unsigned int	i;
 
+	if (!s)
+		return (NULL);
 	ret = (char *)malloc(ft_strlen(s) + 1);
-	if (!ret || !s)
+	if (!ret)
 		return (NULL);
 	i = 0;
 	while (s[i])

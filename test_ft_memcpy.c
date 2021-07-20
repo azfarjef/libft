@@ -12,7 +12,7 @@ int main ()
   puts(str1);
   
   /* Copies contents of str2 to sr1 */
-  ft_memcpy (str1, str2, sizeof(str2));
+  printf("%s\n", (char *)ft_memcpy(str1, str2, sizeof(str2)));
   
   puts("\nstr1 after memcpy ");
   puts(str1);

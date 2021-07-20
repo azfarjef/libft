@@ -6,14 +6,13 @@
 #    By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 22:53:01 by mahmad-j          #+#    #+#              #
-#    Updated: 2021/05/25 03:17:47 by mahmad-j         ###   ########.fr        #
+#    Updated: 2021/07/20 13:15:51 by mahmad-j         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC		=	ft_memset.c		\
 			ft_bzero.c		\
 			ft_memcpy.c		\
-			ft_memccpy.c	\
 			ft_memmove.c	\
 			ft_memchr.c		\
 			ft_memcmp.c		\
@@ -40,6 +39,7 @@ SRC		=	ft_memset.c		\
 			ft_split.c		\
 			ft_itoa.c		\
 			ft_strmapi.c	\
+			ft_striteri.c	\
 			ft_putchar_fd.c	\
 			ft_putstr_fd.c	\
 			ft_putendl_fd.c	\
@@ -73,7 +73,7 @@ $(O)%.o :	%.c libft.h
 			${CC} ${CFLAGS} -c $< -o $@
 
 $(NAME)	:	$(OBJINDIR)
-			ar -rc $(NAME) $(OBJINDIR)
+			ar -rcs $(NAME) $(OBJINDIR)
 
 .PHONY	:	all clean fclean re
 
@@ -88,4 +88,4 @@ fclean	:	clean
 re		:	fclean all
 
 bonus	:	$(OBJBINDIR)
-			ar -rc $(NAME) $(OBJBINDIR)
+			ar -rcs $(NAME) $(OBJBINDIR)

@@ -6,7 +6,7 @@
 /*   By: mahmad-j <mahmad-j@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/29 12:00:49 by mahmad-j          #+#    #+#             */
-/*   Updated: 2021/04/29 12:00:50 by mahmad-j         ###   ########.fr       */
+/*   Updated: 2021/07/20 10:28:16 by mahmad-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	destptr = dest;
 	srcptr = src;
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	while (n--)
 	{
